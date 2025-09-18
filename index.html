@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Týnštejn – Školní časopis</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <img src="logo.png" alt="Logo časopisu Týnštejn" class="logo">
+      <div class="header-text">
+        <h1>Týnštejn</h1>
+        <p>Školní časopis ZŠ Týnská</p>
+      </div>
+    </div>
+    <nav class="nav-bar">
+      <ul>
+        <li><a href="#" data-section="hl-strana" class="nav-link active">Hl. strana</a></li>
+        <li><a href="#" data-section="reportik" class="nav-link">Reportík</a></li>
+        <li><a href="#" id="knihovna-link" class="nav-link">Knihovna</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="hl-strana" class="section container visible">
+    <div class="intro">
+      <h2>O našem časopisu</h2>
+      <p>
+        Vítejte na stránkách školního časopisu <strong>Týnštejn</strong>. Celý časopis vzniká ve škole ZŠ Týnská, kde se dozvíte novinky, reportáže
+        z akcí školy, fotografie, rozhovory a mnoho dalšího. Našim cílem je zachytit život školy, inspirovat ostatní a dát hlas všem, kdo se
+        chtějí podělit o své zážitky a myšlenky.
+      </p>
+      <p>
+        Časopis vychází pravidelně, účastní se ho žáci i učitelé. Rádi přijímáme příspěvky – články, fotky, kresby, texty –, aby každý, kdo má
+        co říct, mohl být slyšet.
+      </p>
+    </div>
+  </section>
+
+  <section id="reportik" class="section container hidden">
+    <h2>📩 Odeslat příspěvek</h2>
+    <form action="https://formsubmit.co/sacdomder@gmail.com" method="POST" enctype="multipart/form-data" id="casopisForm">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="dekujeme.html">
+
+      <label for="jmeno">Jméno a příjmení</label>
+      <input type="text" id="jmeno" name="Jméno" required>
+
+      <label for="trida">Třída</label>
+      <input type="text" id="trida" name="Třída" required>
+
+      <label for="popis">Popis příspěvku</label>
+      <textarea id="popis" name="Popis" rows="4"></textarea>
+
+      <label for="soubor">Soubor (fotka, článek, PDF)</label>
+      <input type="file" id="soubor" name="Soubor">
+
+      <button type="submit" class="btn">🚀 Odeslat příspěvek</button>
+    </form>
+    <p id="formMessage" class="hidden success">✅ Děkujeme! Váš příspěvek byl odeslán.</p>
+  </section>
+
+  <footer class="footer">
+    <p>© 2025 Školní časopis Týnštejn – ZŠ Týnská</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
